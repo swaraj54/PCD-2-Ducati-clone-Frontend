@@ -1,84 +1,70 @@
-Welcome back, everyone! Today, we're starting an exciting project: a Ducati website clone where users can buy bikes and admins can manage the inventory. We'll be using the MERN stack for this project, which includes MongoDB, Express.js, React, and Node.js.
+# Getting Started with Create React App
 
-### Project Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-We'll build a website with two main roles: users and admins. Users can browse and purchase bikes, while admins can manage the bike inventory. Let’s dive into the details.
+## Available Scripts
 
-### Roles and Permissions
+In the project directory, you can run:
 
-1. **User Role**
-   - Browse bikes
-   - View bike details
-   - Add bikes to cart
-   - Purchase bikes
-   - View order history
+### `npm start`
 
-2. **Admin Role**
-   - Add new bikes to the inventory
-   - Edit bike details
-   - Delete bikes from the inventory
-   - View all orders
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Flow Explanation
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-#### Home Page
-The home page will display a list of bikes. Users can browse the bikes and click on any bike to view its details. We'll also include navigation links to login/register, cart, and the admin dashboard for admins.
+### `npm test`
 
-#### User Authentication
-We'll create a login and registration page where users can create an account or log in. We'll implement authentication using JSON Web Tokens (JWT) to ensure secure access.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### Bike Details Page
-When a user clicks on a bike from the home page, they'll be taken to the bike details page. Here, we'll display detailed information about the bike and include an "Add to Cart" button.
+### `npm run build`
 
-#### Cart Page
-The cart page will show all bikes added to the cart by the user. Users can adjust quantities or remove items from the cart. We'll also implement a checkout process to complete the purchase.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### Order History Page
-This page will display a list of all past orders for the logged-in user. Users can view the details and status of each order.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-#### Admin Dashboard
-The admin dashboard is accessible only to users with the admin role. Here, admins can:
-- Manage Bikes: Add, edit, and delete bikes from the inventory.
-- View Orders: Display all orders placed by users and update order statuses.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Backend Flow
+### `npm run eject`
 
-1. **User Authentication**
-   We'll set up routes for user registration and login. JWT will be used for secure authentication and authorization.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-2. **Bike Management (Admin)**
-   We'll create routes for admins to add, update, and delete bikes. Middleware will be implemented to check the admin role before allowing access to these routes.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-3. **Bike Browsing (User)**
-   We'll set up routes to get a list of bikes and fetch details of a specific bike.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-4. **Cart Management**
-   We'll implement routes to add bikes to the cart, update quantities, and remove bikes from the cart. We'll use session or database to store cart data.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-5. **Order Processing**
-   We'll create routes for users to place orders and save order details in the database. Admin routes will be implemented to view and manage all orders.
+## Learn More
 
-### Frontend Flow
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-1. **Home Page Component**
-   We'll fetch and display a list of bikes from the backend. This component will also include links to bike details, cart, and the admin dashboard.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-2. **Authentication Components**
-   We'll create login and registration forms to handle authentication and store JWT tokens in local storage.
+### Code Splitting
 
-3. **Bike Details Component**
-   This component will fetch and display detailed information about a bike and implement the "Add to Cart" functionality.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-4. **Cart Component**
-   We'll display all items in the cart, handle updates to item quantities, and implement checkout functionality.
+### Analyzing the Bundle Size
 
-5. **Order History Component**
-   This component will fetch and display the user's order history.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-6. **Admin Components**
-   - **Manage Bikes Component**: A form to add and edit bikes, and a list to display and delete bikes.
-   - **Order Management Component**: A list of all orders with options to update order statuses.
+### Making a Progressive Web App
 
-### Conclusion
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-To summarize, we’ll be building a Ducati website clone with two main roles: users and admins. Users can browse and purchase bikes, while admins can manage the bike inventory. This project will help you understand how to build a full-stack application using the MERN stack. Follow along, and feel free to ask questions as we go!
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

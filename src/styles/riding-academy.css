@@ -1,0 +1,877 @@
+@font-face {
+  font-family: "ducati rg";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/DucatiStyle_W_Rg.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "ducati bd";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/DucatiStyle_W_Bd.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "ducati condensed rg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/DucatiStyleCond_W_Bd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "ducati condensed bd";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/DucatiStyleCond_W_XBd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "ducati extended rg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/DucatiStyleExt_W_Rg.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "ducati extended bd";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/DucatiStyleExt_W_Bd.woff2") format("woff2");
+}
+
+:root {
+  /* colors */
+  --white: #fff;
+  --white-1: #ebebeb;
+  --white-2: #fafafa;
+
+  --black: #000;
+  --black-1: #0f0f0f;
+
+  --grey-1: #dddddd;
+  --grey-2: #bbbcbc;
+  --grey-3: #ebebeb;
+  --grey-4: #666;
+
+  --red-1: #cc0000;
+
+  /* fonts */
+  --ducati-rg: "ducati rg", Arial, sans-serif;
+  --ducati-bd: "ducati bd", Arial, sans-serif;
+  --ducati-condensed-rg: "ducati condensed rg", Arial, sans-serif;
+  --ducati-condensed-bd: "ducati condensed bd", Arial, sans-serif;
+  --ducati-ext-rg: "ducati extended rg", Arial, sans-serif;
+  --ducati-ext-bd: "ducati extended bd", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ducati-rg);
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.15;
+  color: var(--black-1);
+  background-color: var(--white-1);
+  min-width: 32rem;
+}
+
+div {
+  display: block;
+}
+
+.logo-container {
+  height: 100px;
+}
+
+.page-wrapper {
+  max-width: 200rem;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+
+/* top header */
+.top-header {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+
+  position: absolute;
+  top: 0;
+  left: auto;
+  width: 100%;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.top-header--body {
+  font-family: var(--ducati-condensed-bd);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  max-width: 133rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3.5rem;
+  height: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.scrambler-logo-link {
+  text-decoration: none;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.top-header--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.country > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  text-decoration: none;
+  color: var(--white);
+}
+
+.white-vertical-bar {
+  background-color: var(--white);
+  width: 0.1rem;
+  height: 1.8rem;
+}
+
+.login {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* main menu */
+.main-menu {
+  position: relative;
+  margin-top: 30px;
+}
+
+.sticky {
+  padding-top: 7rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  position: fixed;
+  right: 0;
+  left: 0;
+  max-width: 200rem;
+  width: 100%;
+  margin: 0 auto;
+  transition: height 0.3s, padding 0.3s;
+}
+
+.sticky-body {
+  position: relative;
+  max-width: 133rem;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--white-2);
+  border-radius: 2px;
+  transition: height 0.3s;
+}
+
+.sticky-top-wrap {
+  height: 11rem;
+  padding: 0 4.5rem;
+  transition: height 0.3s;
+  border-bottom: 1px solid rgba(187, 188, 188, 0.5);
+  margin-top: -76px;
+  display: flex;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-menu--left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-icon {
+  font-size: 2.4rem;
+}
+
+.main-menu--list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  gap: 5rem;
+}
+
+.main-menu--link:link,
+.main-menu--link:visited {
+  text-decoration: none;
+  color: var(--black-1);
+  font-family: var(--ducati-condensed-rg);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.main-menu--left {
+  justify-self: start;
+}
+
+.main-menu--list__right {
+  justify-self: end;
+}
+.link-with-triangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.triangle {
+  color: var(--grey-1);
+}
+
+.logo {
+  height: 5.9rem;
+  margin-top: 20px;
+}
+
+.nav-link--red:link,
+.nav-link--red:visited {
+  text-decoration: none;
+  color: var(--red-1);
+  text-transform: uppercase;
+  font-family: var(--ducati-condensed-rg);
+  font-size: 1.4rem;
+  display: none;
+}
+
+/* main */
+.main {
+  width: 100%;
+  background-color: var(--white-2);
+}
+
+/* hero */
+.hero {
+  width: 100%;
+  height: 67rem;
+
+  margin-bottom: 6rem;
+}
+
+.hero-img-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: 8rem 3rem 7.9rem;
+
+  color: var(--white);
+  max-width: 133rem;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  line-height: 1.2;
+  font-size: 4.8rem;
+
+  font-family: var(--ducati-ext-bd);
+  font-weight: 700;
+}
+
+.about {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.about-inner-wrapper {
+  max-width: 66.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.about-inner-wrapper > p {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.08rem;
+  font-family: var(--ducati-rg);
+  color: var(--black-1);
+}
+
+.about-inner-wrapper > p > a {
+  color: var(--black-1);
+}
+
+.courses-title {
+  padding-bottom: 6rem;
+  font-size: 3.2rem;
+  font-family: var(--ducati-ext-bd);
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.08rem;
+  color: var(--black-1);
+}
+
+.courses-body {
+  max-width: 133rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  row-gap: 3.5rem;
+}
+
+.course-card {
+  position: relative;
+}
+
+.course-img-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.course-img-box::after {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0) 80%);
+  opacity: 0.5;
+}
+
+.course-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-info-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.course-category {
+  color: var(--white-2);
+  font-size: 1.4rem;
+  font-family: var(--ducati-condensed-rg);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.course-name {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-family: var(--ducati-ext-bd);
+  font-weight: 700;
+  color: var(--white-2);
+}
+
+.logo-picture-container {
+  max-width: 66.5rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.dre-img {
+  width: 100%;
+}
+
+.subscribe {
+  max-width: 133rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+
+  border-top: 0.1rem solid var(--grey-3);
+  border-bottom: 0.1rem solid var(--grey-3);
+}
+
+.subscribe-wrapper {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  text-align: center;
+}
+
+.subscribe-title {
+  font-family: var(--ducati-ext-bd);
+  font-weight: 700;
+  display: block;
+  font-size: 2.5rem;
+}
+
+.subscribe-privacy,
+.subscribe-updates {
+  color: var(--grey-4);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.subscribe-privacy > a {
+  color: var(--grey-4);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.form > input[type="email"] {
+  width: 45rem;
+  margin-right: 1.5rem;
+  border: 1px solid var(--grey-3);
+  height: 6rem;
+  background: var(--white);
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+.form > input[type="submit"] {
+  background: linear-gradient(to bottom, red, #c00);
+  border-radius: 2px;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-family: var(--ducati-condensed-bd);
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white-2);
+  border: none;
+  height: 6rem;
+  max-width: 19rem;
+  width: 100%;
+  padding: 0 1.2rem;
+}
+
+.recaptcha {
+  font-family: var(--ducati-rg);
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.15;
+  width: 100%;
+  color: var(--grey-2);
+}
+
+.recaptcha > a {
+  color: var(--grey-2);
+}
+
+.footer {
+  max-width: 200rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--black-1);
+  padding-bottom: 12rem;
+}
+
+.footer-body {
+  padding: 0 3rem;
+  position: relative;
+  max-width: 133rem;
+  margin: 0 auto;
+  color: var(--grey-4);
+  text-align: center;
+  padding-top: 6rem;
+
+  font-family: var(--ducati-rg);
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+}
+
+.footer-logo {
+  margin: 0 auto 4.4rem auto;
+}
+
+.footer-logo > img {
+  height: 4.6rem;
+  width: auto;
+}
+
+.footer-links-wrapper {
+  margin-bottom: 4.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6rem;
+}
+
+.footer-links-wrapper > a {
+  color: var(--grey-4);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 30px;
+  font-family: var(--ducati-condensed-rg);
+  font-weight: 400;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.footer-copyright {
+  color: var(--grey-4);
+  text-align: center;
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  padding: 0 1rem;
+
+  margin-bottom: 9rem;
+}
+
+.footer-nav {
+  max-width: 133rem;
+  width: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.scrambler-ducati,
+.scrambler-configurator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-logo-box {
+  width: 10.2rem;
+  height: 3.7rem;
+}
+
+.footer-logo-box > img {
+  width: 100%;
+  height: 100%;
+}
+
+.scrambler-ducati > p,
+.scrambler-configurator > p {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: var(--ducati-condensed-bd);
+  font-weight: 700;
+  color: var(--grey-4);
+  letter-spacing: 1px;
+}
+
+.footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-center > .social {
+  font-size: 2rem;
+  height: 5rem;
+  width: 5.4rem;
+  color: var(--grey-4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--grey-4);
+  font-family: var(--ducati-condensed-bd);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES */
+
+/* 1149px/16px = 71.8125em */
+@media (max-width: 71.81em) {
+  .main-menu--list__left > :nth-child(3),
+  .main-menu--list__left > :nth-child(4),
+  .main-menu--list__right > :nth-child(1) {
+    display: none;
+  }
+}
+
+/* 979.84px/16px = 61.24em */
+@media (max-width: 61.24em) {
+  .top-header {
+    display: none;
+  }
+
+  .sticky {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .sticky-top-wrap {
+    height: 9rem;
+  }
+
+  .main-menu--left {
+    justify-self: start;
+  }
+
+  .main-menu--list {
+    display: none;
+  }
+
+  .nav-link--red:link,
+  .nav-link--red:visited {
+    display: block;
+    justify-self: end;
+  }
+
+  .title {
+    font-size: 3.6rem;
+  }
+
+  .courses-title {
+    font-size: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer-logo {
+    margin: 0 auto 3.5rem auto;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 6.5rem;
+  }
+}
+
+/* 740px/16px = 46.25em */
+@media (max-width: 46.25em) {
+  .top-header {
+    padding: 0 2rem;
+  }
+
+  .sticky-top-wrap {
+    height: 7.5rem;
+  }
+
+  .hero,
+  .about,
+  .logo-picture-container {
+    margin-bottom: 5rem;
+  }
+
+  .hero-info {
+    padding: 8rem 2rem 11rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .courses-title {
+    font-size: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .courses-body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form > input[type="email"] {
+    margin-right: 0;
+  }
+
+  .footer-body {
+    padding-top: 5rem;
+  }
+
+  .footer-logo {
+    margin: 0 auto 3rem auto;
+  }
+
+  .footer-logo > img {
+    height: 90%;
+  }
+}
+
+/* 560px/16px = 35em */
+@media (max-width: 35em) {
+  .title {
+    font-size: 2.7rem;
+  }
+
+  .courses-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .course-card {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .course-img-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .course-img-box::after {
+    display: none;
+  }
+
+  .course-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .course-info-box {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 2.5rem;
+    justify-content: flex-start;
+  }
+
+  .course-category {
+    color: var(--grey-2);
+    font-size: 1.2rem;
+  }
+
+  .course-name {
+    font-size: 1.4rem;
+    color: var(--black-1);
+  }
+}
